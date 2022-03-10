@@ -1,0 +1,148 @@
+.nav__item a {
+  color: var(--clr-white);
+  font-size: var(--font-size-body);
+}
+
+.nav__item:nth-of-type(4) a {
+  padding: var(--primary-btn-padding-y) var(--primary-btn-padding-x);
+  background-color: var(--clr-white);
+  border-radius: 50vh;
+  color: var(--clr-black);
+  font-family: var(--font-secondary);
+  text-transform: uppercase;
+}
+
+.nav__item:nth-of-type(4):hover a {
+  opacity: 80%;
+}
+
+.hero__heading {
+  color: var(--clr-white);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  text-align: center;
+}
+
+.nav__toggle {
+  border: none;
+  background: none;
+  display: none;
+}
+
+.line {
+  background-color: var(--clr-white);
+  width: 30px;
+  height: 3px;
+}
+
+.line + .line {
+  margin-top: 7px;
+}
+
+@media screen and (min-width: 702px) {
+  .nav__links {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .nav__toggle {
+    display: block;
+  }
+
+  .hero__heading {
+    font-size: 48px;
+    padding-top: 30px;
+  }
+
+  .nav__links {
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    left: 50%;
+    top: 120px;
+    width: 95%;
+    padding: 50px 0;
+    transform: translate(-50%);
+    display: none;
+  }
+  .nav__links::before {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 40px;
+    aspect-ratio: 1;
+    right: 0%;
+    top: -10%;
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
+
+  .nav__links a {
+    color: var(--clr-black);
+  }
+  .nav__item:nth-of-type(4) a {
+    background-color: var(--clr-primary-yellow);
+    margin-top: 5px;
+    display: block;
+  }
+}
+
+.text-block {
+  max-width: 400px;
+}
+
+.img-with-text {
+  position: relative;
+  width: 100%;
+}
+
+.text-content {
+  position: absolute;
+  max-width: 350px;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 10%;
+}
+
+.text-content h4 {
+  font-size: 32px;
+  font-family: var(--font-secondary);
+  margin-bottom: 30px;
+}
+
+.client img {
+  max-width: 100px;
+  border-radius: 100%;
+}
+
+.review__heading {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font-family: var(--font-secondary);
+}
+
+.client {
+  text-align: center;
+}
+
+.name {
+  font-family: var(--font-secondary);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.job {
+  font-size: 12px;
+}
+
+@media screen and (max-width: 700px) {
+  .text-block {
+    text-align: center;
+    padding: 30px 0;
+  }
+
+  .text-block:nth-of-type(1) {
+    grid-row: 2;
+  }
+}
